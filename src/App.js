@@ -43,18 +43,18 @@ class App extends Component {
 
 <div className="jumbotron">
   <div className="container text-center">
-    <h1>My Portfolio</h1>      
-    <p>Some text that represents "Me"...</p>
+    <h1>React App in AWS</h1>      
   </div>
 </div>
   
   <div className="container-fluid bg-3 text-center">    
-  <h3>Some of my Work</h3>
+  {/* <h3>Some of my Work</h3> */}
   <div className="row">
   {posts.map((post) => ( 
-    <div className="col-sm-3" key={post.id}>
-      <img src ={`https://picsum.photos/id/${post.id}/300/200`} className="img-responsive"  alt="new" />
+    <div className="card text-dark bg-white col-sm-3 px-3 py-3" key={post.id}>
       <p> {post.title}</p>
+      <img src ={`https://picsum.photos/id/${post.id}/300/200`} className="img-responsive"  alt="new" />
+      <p>{post.body}</p>
     </div>
     ))}
    
@@ -65,25 +65,11 @@ class App extends Component {
 
 
 <footer className="container-fluid text-center">
-  <p>Footer Text</p>
+  <p>React App in AWS</p>
 </footer>
 </div>
       
-      // {/* <div className="container">
-      //   <div className="jumbotron">
-      //     <h1 className="display-4">Blog posts</h1>
-      //   </div>
-      //   {posts.map((post) => (
-      //     <div className="card" key={post.id}>
-      //       <div className="card-header card-primary">
-      //         #{post.id} {post.title}
-      //       </div>
-      //       <div className="card-body">
-      //         <p className="card-text">{post.body}</p>
-      //       </div>
-      //     </div>
-      //   ))}
-      // </div> */}
+      
     );
   }
 }
